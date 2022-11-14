@@ -14,7 +14,7 @@ If you don't wish to build the bento from scratch, feel free to download one of 
 Clone repository and install dependencies:
 
 ```bash
-git clone https://github.com/bentoml/stable-diffusion-bentoml.git && cd stable-diffusion-bentoml
+git clone https://github.com/sirajfarhan/stable-diffusion-bentoml.git && cd stable-diffusion-bentoml
 python3 -m venv venv && . venv/bin/activate
 pip install -U pip
 pip install -r requirements.txt
