@@ -687,5 +687,5 @@ if __name__ == "__main__":
         '--max_train_steps', training_steps
 
     ]
-    args = parse_args()
+    args = parse_args(input_args)
     main(args)
