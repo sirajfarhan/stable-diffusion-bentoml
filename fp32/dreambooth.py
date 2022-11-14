@@ -664,9 +664,9 @@ def main(args):
 
 
 if __name__ == "__main__":
-    model_name = './fp32/models'
-    instance_dir = './fp32/training'
-    output_dir = './fp32/output'
+    model_name = 'runwayml/stable-diffusion-v1-5'
+    instance_dir = './training'
+    output_dir = './models/v1_5'
     instance_prompt = 'a photo of sks'
     training_steps = 800
 
