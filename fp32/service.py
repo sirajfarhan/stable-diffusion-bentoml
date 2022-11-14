@@ -50,7 +50,7 @@ class StableDiffusionRunnable(bentoml.Runnable):
         height = data.get('height', 512)
         width = data.get('width', 512)
         num_inference_steps = data.get('num_inference_steps', 50)
-        generator = torch.Generator(self.device)
+        generator = torch.Generator(self.device)ac
         generator.manual_seed(data.get('seed'))
 
         if not data['safety_check']:
