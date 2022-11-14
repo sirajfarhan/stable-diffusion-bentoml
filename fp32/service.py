@@ -16,7 +16,7 @@ class StableDiffusionRunnable(bentoml.Runnable):
     SUPPORTS_CPU_MULTI_THREADING = True
 
     def __init__(self):
-        model_id = "./models/v1_4"
+        model_id = "./models/v1_5"
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
         txt2img_pipe = StableDiffusionPipeline.from_pretrained(model_id)
