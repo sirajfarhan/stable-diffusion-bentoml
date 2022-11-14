@@ -664,28 +664,28 @@ def main(args):
 
 
 if __name__ == "__main__":
-model_name = 'runwayml/stable-diffusion-v1-5'
-instance_dir = './training'
-output_dir = './models/v1_5'
-instance_prompt = 'a photo of sks'
-training_steps = '800'
+    model_name = 'runwayml/stable-diffusion-v1-5'
+    instance_dir = './training'
+    output_dir = './models/v1_5'
+    instance_prompt = 'a photo of sks'
+    training_steps = '800'
 
-input_args = [
-    '--pretrained_model_name_or_path', model_name,
-    '--instance_data_dir', instance_dir,
-    '--output_dir', output_dir,
-    '--instance_prompt', instance_prompt,
-    '--resolution', '512',
+    input_args = [
+        '--pretrained_model_name_or_path', model_name,
+        '--instance_data_dir', instance_dir,
+        '--output_dir', output_dir,
+        '--instance_prompt', instance_prompt,
+        '--resolution', '512',
 
-    '--train_batch_size', '1',
-    '--gradient_accumulation_steps', '2',
-    '--gradient_checkpointing',
-    '--use_8bit_adam', 
-    '--learning_rate', '5e-6',
-    '--lr_scheduler', 'constant',
-    '--lr_warmup_steps', '0',
-    '--max_train_steps', training_steps
+        '--train_batch_size', '1',
+        '--gradient_accumulation_steps', '2',
+        '--gradient_checkpointing',
+        '--use_8bit_adam', 
+        '--learning_rate', '5e-6',
+        '--lr_scheduler', 'constant',
+        '--lr_warmup_steps', '0',
+        '--max_train_steps', training_steps
 
-]
+    ]
     args = parse_args(input_args)
     main(args)
