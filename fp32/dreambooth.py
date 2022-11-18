@@ -663,7 +663,7 @@ def train(args):
     accelerator.end_training()
 
 
-if __name__ == "__main__":
+def train():
     model_name = 'runwayml/stable-diffusion-v1-5'
     instance_dir = './training'
     output_dir = './models/v1_5'

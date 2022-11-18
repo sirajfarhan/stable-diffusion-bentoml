@@ -6,3 +6,5 @@ ftfy
 pydantic
 accelerate
 torchvision
+bitsandbytes-cuda117
+requests
