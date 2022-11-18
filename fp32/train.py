@@ -5,7 +5,7 @@ import shutil
 
 from dreambooth import train
 
-baseUrl = 'https://1337-sirajfarhan-sdbackend-apb8yr43sdm.ws-eu74.gitpod.io'
+baseUrl = '54.193.141.160:1337'
 
 while True:
     ipAddress = requests.request('GET', 'https://api.ipify.org').text
