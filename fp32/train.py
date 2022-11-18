@@ -1,6 +1,7 @@
 import time
 import requests
 from urllib.request import urlretrieve
+import shutil
 
 from dreambooth import train
 
@@ -26,12 +27,14 @@ while True:
 
             urlretrieve(url, './training/' + url.split('/')[len(url.split('/'))-1])
 
-            train()
+        train()
 
-            requests.put(baseUrl + '/api/fine-tunes/' + str(instance['id']), json= { 'data': { 'status': 'completed' } })
+        shutil.make_archive('./models/v1_5', 'zip', './models/v1_5')
 
-        # train()
+        files = {'files': ('v1_5.zip', open('./models/v1_5.zip', 'rb'))}
+        response = requests.post(baseUrl + '/api/upload', files=files)
 
+        requests.put(baseUrl + '/api/fine-tunes/' + str(instance['id']), json= { 'data': { 'status': 'completed', 'fineTunedModel':  response.json()[0]['id'] } })
 
         break
     else:
