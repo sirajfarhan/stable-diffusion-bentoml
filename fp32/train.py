@@ -9,7 +9,7 @@ baseUrl = 'https://1337-sirajfarhan-sdbackend-apb8yr43sdm.ws-eu74.gitpod.io'
 while True:
     ipAddress = requests.request('GET', 'https://api.ipify.org').text
 
-    url = baseUrl + '/api/fine-tunes?populate[inputImages][fields][1]=url&filters[ipAddress][$eq]=' + ipAddress + '&filters[status][$eq]=processing'
+    url = baseUrl + '/api/fine-tunes?populate[inputImages][fields][1]=url&filters[ipAddress][$eq]=' + ipAddress + '&filters[status][$eq]=initiated'
 
     response = requests.request('GET', url).json()
 
