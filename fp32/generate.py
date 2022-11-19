@@ -24,7 +24,7 @@ pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float
 
 for prompt_response in prompt_reponses['data']:
     prompt = prompt_response['attributes']['prefix'] + ' sks. ' + prompt_response['attributes']['suffix']
-    seed = prompt_response['attributes']['seed']
+    seed = int(prompt_response['attributes']['seed'])
 
     width = prompt_response['attributes']['width']
     height = prompt_response['attributes']['height']
