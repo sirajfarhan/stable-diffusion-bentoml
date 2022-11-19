@@ -44,7 +44,7 @@ for prompt_response in prompt_reponses['data']:
     image.save('generated.png')
 
     files = {'files': ('generated.png', open('./generated.png', 'rb'))}
-    response = requests.post(baseUrl + '/api/upload', files=files)
+    response = requests.post(base_url + '/api/upload', files=files)
 
     requests.post(
         base_url + '/api/generated-outputs',
