@@ -29,12 +29,12 @@ while True:
 
         train()
 
-        shutil.make_archive('./models/v1_5', 'zip', './models/v1_5')
+        # shutil.make_archive('./models/v1_5', 'zip', './models/v1_5')
 
-        files = {'files': ('v1_5.zip', open('./models/v1_5.zip', 'rb'))}
-        response = requests.post(baseUrl + '/api/upload', files=files)
+        # files = {'files': ('v1_5.zip', open('./models/v1_5.zip', 'rb'))}
+        # response = requests.post(baseUrl + '/api/upload', files=files)
 
-        requests.put(baseUrl + '/api/fine-tunes/' + str(instance['id']), json= { 'data': { 'status': 'completed', 'fineTunedModel':  response.json()[0]['id'] } })
+        # requests.put(baseUrl + '/api/fine-tunes/' + str(instance['id']), json= { 'data': { 'status': 'completed', 'fineTunedModel':  response.json()[0]['id'] } })
 
         break
     else:
