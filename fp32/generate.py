@@ -38,7 +38,7 @@ for prompt_response in prompt_reponses['data']:
         guidance_scale=guidance_scale,
         width=width,
         height=height,
-        latents=get_latents(seed, width=width, height=height)
+        latents=get_latents(seed, width=width, height=height).half()
     ).images[0]
 
     image.save('generated.png')
