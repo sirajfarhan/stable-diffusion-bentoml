@@ -50,7 +50,7 @@ for prompt_response in prompt_reponses['data']:
         base_url + '/api/generated-outputs',
         json={
             'data': {
-                'generatedImages': [file['id'] for file in files],
+                'generatedImages': [file['id'] for file in files['data']],
                 'prompt': prompt_response['id']
             }
         }
